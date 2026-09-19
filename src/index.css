@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom radial gradient backgrounds matching Elementor exact specs */
+.bg-radial-card-1 {
+  background: radial-gradient(circle at top left, #3E4100 0%, #FFA91E 100%);
+}
+
+.bg-radial-card-2 {
+  background: radial-gradient(circle at top left, #FFA91E 0%, #3E4100 100%);
+}
+
+.bg-radial-testimonial {
+  background: radial-gradient(circle at top left, #3E4100 29%, #FFA91E 100%);
+}
+
+/* Blocksy / Elementor hover state reproduction */
+.ct-service-box {
+  transition: all 0.3s ease;
+}
+
+.ct-service-box:hover {
+  background: #FFA91E !important;
+  border-color: #6EC1E4 !important;
+  box-shadow: 0px 30px 50px 0px rgba(89, 64, 195, 0.3) !important;
+}
+
+.ct-service-box:hover h3,
+.ct-service-box:hover p,
+.ct-service-box:hover svg {
+  color: #FFFFFF !important;
+  transition: color 0.3s ease;
+}
+
+/* Parallax backgrounds */
+.bg-fixed-parallax {
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 1024px) {
+  .bg-fixed-parallax {
+    background-attachment: scroll;
+  }
+}
+
