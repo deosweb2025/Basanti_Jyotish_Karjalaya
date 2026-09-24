@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: http://www.basantijyotishkaryalaya.co.in/sitemap.xml

@@ -1,52 +1,68 @@
-import React from 'react';
-import { MapPin, Phone, Mail } from 'lucide-react';
-
+import React from "react";
+import { MapPin, Phone, Mail, ChevronRight } from "lucide-react";
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer id="footer" className="w-full text-white scroll-mt-[70px] lg:scroll-mt-[100px]">
-      {/* Middle Row: Exact Blocksy background image with olive linear-gradient overlay */}
+    <footer
+      id="footer"
+      className="w-full text-white scroll-mt-[70px] lg:scroll-mt-[100px]"
+    >
+      {/* Main Footer Body */}
       <div
-        className="w-full py-[40px] md:py-[50px] lg:py-[70px]"
+        className="w-full py-10 md:py-12 relative overflow-hidden"
         style={{
-          backgroundColor: '#3E4100',
+          backgroundColor: "#3E4100",
           backgroundImage:
-            'linear-gradient(rgba(68, 74, 0, 0.73), rgba(68, 74, 0, 0.73)), url("/assets/testimonials-bg.jpg")',
-          backgroundPosition: '52% 51%',
-          backgroundSize: 'cover',
-          backgroundRepeat: 'no-repeat',
+            'linear-gradient(rgba(40, 45, 0, 0.88), rgba(40, 45, 0, 0.88)), url("/assets/testimonials-bg.jpg")',
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
         }}
       >
-        <div className="max-w-[1140px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-12">
+        <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
             {/* Column 1: Contact Info */}
-            <div className="text-left">
-              <h3 className="font-roboto font-bold text-[16px] text-[#E7EBEE] mb-4">
+            <div>
+              <h3 className="font-bold text-lg md:text-xl text-white mb-3 tracking-wider uppercase font-roboto">
                 Contact Info
               </h3>
-              <p className="text-white text-sm leading-relaxed mb-6">
-                Nunc lobortis mattis aliquam faucibus purus in massa arcu odio ut sem nulla pharetra diam amet.
+              <div className="w-16 h-1 bg-[#FFA91E] rounded-full mb-6"></div>
+              <p className="text-gray-300 text-sm leading-relaxed mb-6 font-light">
+                Nunc lobortis mattis aliquam faucibus purus in massa arcu odio
+                ut sem nulla pharetra diam amet.
               </p>
-              <div className="space-y-3 text-sm text-white">
-                <div className="flex items-start space-x-3">
-                  <MapPin className="w-5 h-5 text-[#FFA91E] flex-shrink-0 mt-0.5" />
-                  <span>2No, Sarada Sarani, Sreepur, Badamtala, Madhyamgram, West Bengal, Kolkata - 700130</span>
+
+              <div className="space-y-4 text-sm text-gray-300 font-light">
+                <div className="flex items-start group">
+                  <div className="mt-0.5 mr-3 flex-shrink-0 bg-white/5 p-2 rounded-full group-hover:bg-[#FFA91E] group-hover:text-white transition-all duration-300 shadow-sm">
+                    <MapPin className="w-3.5 h-3.5 text-[#FFA91E] group-hover:text-white transition-colors" />
+                  </div>
+                  <span className="leading-relaxed">
+                    2No, Sarada Sarani, Sreepur, Badamtala, Madhyamgram, West
+                    Bengal, Kolkata - 700130
+                  </span>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <Phone className="w-4 h-4 text-[#FFA91E] flex-shrink-0" />
+
+                <div className="flex items-center group">
+                  <div className="mr-3 flex-shrink-0 bg-white/5 p-2 rounded-full group-hover:bg-[#FFA91E] transition-all duration-300 shadow-sm">
+                    <Phone className="w-3.5 h-3.5 text-[#FFA91E] group-hover:text-white transition-colors" />
+                  </div>
                   <a
                     href="tel:9831419874"
-                    className="hover:text-[#FFA91E] transition-colors"
+                    className="hover:text-[#FFA91E] transition-colors duration-300"
                   >
                     +91 98314 19874
                   </a>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <Mail className="w-4 h-4 text-[#FFA91E] flex-shrink-0" />
+
+                <div className="flex items-center group">
+                  <div className="mr-3 flex-shrink-0 bg-white/5 p-2 rounded-full group-hover:bg-[#FFA91E] transition-all duration-300 shadow-sm">
+                    <Mail className="w-3.5 h-3.5 text-[#FFA91E] group-hover:text-white transition-colors" />
+                  </div>
                   <a
                     href="mailto:amritamaitra95@gmail.com"
-                    className="hover:text-[#FFA91E] transition-colors break-all"
+                    className="hover:text-[#FFA91E] transition-colors duration-300 break-all"
                   >
                     amritamaitra95@gmail.com
                   </a>
@@ -54,84 +70,103 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Column 2: About us & Achievements (Centered on Desktop/Tablet per Blocksy rule) */}
-            <div className="text-left md:text-center">
-              <h3 className="font-roboto font-bold text-[16px] text-[#E7EBEE] mb-4">
-                About us
+            {/* Column 2: About us */}
+            <div>
+              <h3 className="font-bold text-lg md:text-xl text-white mb-3 tracking-wider uppercase font-roboto">
+                About Us
               </h3>
-              <ul className="space-y-2 text-sm text-white mb-6">
+              <div className="w-16 h-1 bg-[#FFA91E] rounded-full mb-6"></div>
+              <ul className="space-y-3 text-sm text-gray-300 font-light">
                 <li>
-                  <a href="#about" className="hover:text-[#FFA91E] transition-colors">
+                  <a
+                    href="#about"
+                    className="inline-flex items-center hover:text-[#FFA91E] hover:translate-x-2 transition-all duration-300"
+                  >
+                    <ChevronRight className="w-3.5 h-3.5 mr-1.5 text-[#FFA91E]" />
                     About Organization
                   </a>
                 </li>
                 <li>
-                  <a href="#service" className="hover:text-[#FFA91E] transition-colors">
+                  <a
+                    href="#service"
+                    className="inline-flex items-center hover:text-[#FFA91E] hover:translate-x-2 transition-all duration-300"
+                  >
+                    <ChevronRight className="w-3.5 h-3.5 mr-1.5 text-[#FFA91E]" />
                     Our Clients
                   </a>
                 </li>
                 <li>
-                  <a href="#testimonial" className="hover:text-[#FFA91E] transition-colors">
+                  <a
+                    href="#testimonial"
+                    className="inline-flex items-center hover:text-[#FFA91E] hover:translate-x-2 transition-all duration-300"
+                  >
+                    <ChevronRight className="w-3.5 h-3.5 mr-1.5 text-[#FFA91E]" />
                     Our Partners
                   </a>
                 </li>
               </ul>
-
-              <h4 className="font-roboto font-bold text-[16px] text-[#E7EBEE] mb-2">
-                Achievements
-              </h4>
-              <p className="text-white text-sm leading-relaxed">
-                Massa sed elementum tempus egestas sed sed risus at ultrices mi tempus imperdiet nulla.
-              </p>
             </div>
 
-            {/* Column 3: Quick Links & Useful Information */}
-            <div className="text-left">
-              <h3 className="font-roboto font-bold text-[16px] text-[#E7EBEE] mb-4">
+            {/* Column 3: Quick Links */}
+            <div>
+              <h3 className="font-bold text-lg md:text-xl text-white mb-3 tracking-wider uppercase font-roboto">
                 Quick Links
               </h3>
-              <ul className="space-y-2 text-sm text-white mb-6">
+              <div className="w-16 h-1 bg-[#FFA91E] rounded-full mb-6"></div>
+              <ul className="space-y-3 text-sm text-gray-300 font-light">
                 <li>
-                  <a href="#home" className="hover:text-[#FFA91E] transition-colors">
+                  <a
+                    href="#home"
+                    className="inline-flex items-center hover:text-[#FFA91E] hover:translate-x-2 transition-all duration-300"
+                  >
+                    <ChevronRight className="w-3.5 h-3.5 mr-1.5 text-[#FFA91E]" />
                     Introduction
                   </a>
                 </li>
                 <li>
-                  <a href="#about" className="hover:text-[#FFA91E] transition-colors">
+                  {/* Active Link Styling as shown in screenshot */}
+                  <a
+                    href="#about"
+                    className="inline-flex items-center text-[#FFA91E] translate-x-1 font-medium transition-all duration-300"
+                  >
+                    <ChevronRight className="w-3.5 h-3.5 mr-1.5 text-[#FFA91E]" />
                     Organisation Team
                   </a>
                 </li>
                 <li>
-                  <a href="#footer" className="hover:text-[#FFA91E] transition-colors">
+                  <a
+                    href="#footer"
+                    className="inline-flex items-center hover:text-[#FFA91E] hover:translate-x-2 transition-all duration-300"
+                  >
+                    <ChevronRight className="w-3.5 h-3.5 mr-1.5 text-[#FFA91E]" />
                     Press Enquiries
                   </a>
                 </li>
               </ul>
-
-              <h4 className="font-roboto font-bold text-[16px] text-[#E7EBEE] mb-2">
-                Useful Information
-              </h4>
-              <p className="text-white text-sm leading-relaxed">
-                Amet commodo nulla facilisi nullam vehicula ipsum. Faucibus pulvinar elementum integer enim.
-              </p>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Bottom Row: Exact Blocksy #0C0606 Copyright Bar */}
-      <div className="w-full bg-[#0C0606] py-[15px] sm:py-[25px]">
-        <div className="max-w-[1140px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="font-roboto text-[14px] sm:text-[15px] text-white">
-            Copyright © {currentYear} Basanti Jyotish Karyalaya - Powered by
+      {/* Copyright Bar */}
+      <div className="w-full bg-[#0a0a0a] py-5 border-t border-white/5 relative z-20">
+        <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-3">
+          <p className="text-sm text-gray-400 font-light">
+            Copyright © {currentYear}{" "}
+            <span className="text-white font-medium">
+              Basanti Jyotish Karyalaya
+            </span>
+          </p>
+          <p className="text-sm text-gray-400 font-light">
+            Design & Developed by{" "}
             <a
               href="https://www.teamdeoskolkata.in/"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-bold hover:text-red-700 transition-colors duration-300 ml-1"
+              className="text-white font-medium hover:text-[#FFA91E] transition-colors duration-300 ml-1"
             >
               Digital Exposure Online Service
-            </a>.
+            </a>
           </p>
         </div>
       </div>

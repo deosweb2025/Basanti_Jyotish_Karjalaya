@@ -1,15 +1,16 @@
-import React from 'react';
-import { X } from 'lucide-react';
+import React from "react";
+import { X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function MobileNavDrawer({ isOpen, onClose }) {
   if (!isOpen) return null;
 
   const navLinks = [
-    { label: 'Home', href: '#home' },
-    { label: 'About', href: '#about' },
-    { label: 'Services', href: '#service' },
-    { label: 'Testimonials', href: '#testimonial' },
-    { label: 'Conatct', href: '#footer' },
+    { label: "Home", href: "/#home" },
+    { label: "About", href: "/#about" },
+    { label: "Service", href: "/services" },
+    { label: "Testimonials", href: "/#testimonial" },
+    { label: "Contact", href: "/#footer" },
   ];
 
   return (
@@ -23,7 +24,7 @@ export default function MobileNavDrawer({ isOpen, onClose }) {
       {/* Drawer Panel: exact Blocksy background rgba(18, 21, 25, 0.98) */}
       <div
         className="relative ml-auto w-[90vw] sm:w-[65vw] max-w-sm h-full shadow-2xl flex flex-col p-6 z-10"
-        style={{ backgroundColor: 'rgba(18, 21, 25, 0.98)' }}
+        style={{ backgroundColor: "rgba(18, 21, 25, 0.98)" }}
       >
         <div className="flex items-center justify-between pb-6 border-b border-white/10">
           <span className="font-roboto font-bold text-lg text-[#FFA91E]">
@@ -41,14 +42,14 @@ export default function MobileNavDrawer({ isOpen, onClose }) {
         {/* Mobile menu items: 20px, bold, uppercase, white */}
         <nav className="flex flex-col py-8 space-y-4">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.label}
-              href={link.href}
+              to={link.href}
               onClick={onClose}
               className="font-roboto font-bold text-[20px] uppercase text-white hover:text-[#FFA91E] transition-colors py-2"
             >
               {link.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
