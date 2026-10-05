@@ -48,7 +48,7 @@ export default function ServicesSection() {
   return (
     <section
       id="service"
-      className="relative w-full bg-fixed-parallax py-[50px] lg:py-[100px] scroll-mt-[70px] lg:scroll-mt-[100px]"
+      className="relative w-full bg-fixed-parallax py-[50px] lg:py-[100px] scroll-mt-[85px] lg:scroll-mt-[110px]"
       style={{
         backgroundImage: `url('/assets/services-about-bg.jpg')`,
         backgroundPosition: "center center",

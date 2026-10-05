@@ -4,7 +4,7 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className="relative w-full bg-fixed-parallax pt-[50px] pb-0 lg:py-[100px] scroll-mt-[70px] lg:scroll-mt-[100px]"
+      className="relative w-full bg-fixed-parallax pt-[50px] pb-0 lg:py-[100px] scroll-mt-[85px] lg:scroll-mt-[110px]"
       style={{
         backgroundImage: `url('/assets/services-about-bg.jpg')`,
         backgroundPosition: "center center",
@@ -33,6 +33,8 @@ export default function AboutSection() {
               <img
                 src="/assets/about-astrologer.jpg"
                 alt="Smt. Amrita Maitra - Best Astrologer in Kolkata"
+                width="400"
+                height="500"
                 className="w-full h-auto object-cover rounded-[15px] block transition-transform duration-700 group-hover:scale-105"
                 loading="lazy"
                 decoding="async"

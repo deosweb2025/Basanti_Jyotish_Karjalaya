@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer
       id="footer"
-      className="w-full text-white scroll-mt-[70px] lg:scroll-mt-[100px]"
+      className="w-full text-white scroll-mt-[85px] lg:scroll-mt-[110px]"
     >
       {/* Main Footer Body */}
       <div
@@ -22,15 +22,26 @@ export default function Footer() {
       >
         <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
-            {/* Column 1: Contact Info */}
+            {/* Column 1: Brand & Contact Info */}
             <div>
-              <h3 className="font-bold text-lg md:text-xl text-white mb-3 tracking-wider uppercase font-roboto">
-                Contact Info
-              </h3>
-              <div className="w-16 h-1 bg-[#FFA91E] rounded-full mb-6"></div>
+              <div className="flex items-center space-x-3 mb-4">
+                <img
+                  src="/assets/Basanti_Logo.png"
+                  alt="Basanti Jyotish Karyalaya Logo"
+                  className="h-16 w-auto object-contain drop-shadow-md"
+                />
+                <div>
+                  <h3 className="font-bold text-lg md:text-xl text-white tracking-wider uppercase font-roboto leading-tight">
+                    Basanti Jyotish
+                  </h3>
+                  <p className="text-xs text-[#FFA91E] font-medium tracking-wide">
+                    Karyalaya
+                  </p>
+                </div>
+              </div>
+              <div className="w-16 h-1 bg-[#FFA91E] rounded-full mb-4"></div>
               <p className="text-gray-300 text-sm leading-relaxed mb-6 font-light">
-                Nunc lobortis mattis aliquam faucibus purus in massa arcu odio
-                ut sem nulla pharetra diam amet.
+                Trusted Vedic Astrology, Vastu Shastra &amp; Spiritual Consultation services by Smt. Amrita Maitra in Madhyamgram, Barasat &amp; Kolkata.
               </p>
 
               <div className="space-y-4 text-sm text-gray-300 font-light">
@@ -88,6 +99,15 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
+                    href="#certificates"
+                    className="inline-flex items-center hover:text-[#FFA91E] hover:translate-x-2 transition-all duration-300"
+                  >
+                    <ChevronRight className="w-3.5 h-3.5 mr-1.5 text-[#FFA91E]" />
+                    Certifications &amp; Awards
+                  </a>
+                </li>
+                <li>
+                  <a
                     href="#service"
                     className="inline-flex items-center hover:text-[#FFA91E] hover:translate-x-2 transition-all duration-300"
                   >
@@ -116,30 +136,29 @@ export default function Footer() {
               <ul className="space-y-3 text-sm text-gray-300 font-light">
                 <li>
                   <a
-                    href="#home"
+                    href="#why-choose-us"
                     className="inline-flex items-center hover:text-[#FFA91E] hover:translate-x-2 transition-all duration-300"
                   >
                     <ChevronRight className="w-3.5 h-3.5 mr-1.5 text-[#FFA91E]" />
-                    Introduction
-                  </a>
-                </li>
-                <li>
-                  {/* Active Link Styling as shown in screenshot */}
-                  <a
-                    href="#about"
-                    className="inline-flex items-center text-[#FFA91E] translate-x-1 font-medium transition-all duration-300"
-                  >
-                    <ChevronRight className="w-3.5 h-3.5 mr-1.5 text-[#FFA91E]" />
-                    Organisation Team
+                    Why Choose Us
                   </a>
                 </li>
                 <li>
                   <a
-                    href="#footer"
+                    href="#faq"
                     className="inline-flex items-center hover:text-[#FFA91E] hover:translate-x-2 transition-all duration-300"
                   >
                     <ChevronRight className="w-3.5 h-3.5 mr-1.5 text-[#FFA91E]" />
-                    Press Enquiries
+                    Frequently Asked Questions
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#contact"
+                    className="inline-flex items-center text-[#FFA91E] font-medium hover:translate-x-2 transition-all duration-300"
+                  >
+                    <ChevronRight className="w-3.5 h-3.5 mr-1.5 text-[#FFA91E]" />
+                    Book WhatsApp Consultation
                   </a>
                 </li>
               </ul>

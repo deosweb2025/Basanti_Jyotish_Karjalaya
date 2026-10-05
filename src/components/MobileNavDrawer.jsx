@@ -9,8 +9,10 @@ export default function MobileNavDrawer({ isOpen, onClose }) {
     { label: "Home", href: "/#home" },
     { label: "About", href: "/#about" },
     { label: "Service", href: "/services" },
-    { label: "Testimonials", href: "/#testimonial" },
-    { label: "Contact", href: "/#footer" },
+    { label: "Certificates", href: "/#certificates" },
+    { label: "Why Choose Us", href: "/#why-choose-us" },
+    { label: "FAQ", href: "/#faq" },
+    { label: "Contact", href: "/#contact" },
   ];
 
   return (
@@ -27,9 +29,21 @@ export default function MobileNavDrawer({ isOpen, onClose }) {
         style={{ backgroundColor: "rgba(18, 21, 25, 0.98)" }}
       >
         <div className="flex items-center justify-between pb-6 border-b border-white/10">
-          <span className="font-roboto font-bold text-lg text-[#FFA91E]">
-            Basanti Jyotish
-          </span>
+          <div className="flex items-center space-x-3">
+            <img
+              src="/assets/Basanti_Logo.png"
+              alt="Basanti Logo"
+              className="h-12 w-auto object-contain filter drop-shadow-[0_2px_6px_rgba(0,0,0,0.6)]"
+            />
+            <div className="flex flex-col">
+              <span className="font-roboto font-extrabold text-lg text-[#FFA91E] leading-tight drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)]">
+                Basanti Jyotish
+              </span>
+              <span className="font-roboto font-bold text-xs text-white tracking-[0.15em] uppercase leading-tight">
+                Karyalaya
+              </span>
+            </div>
+          </div>
           <button
             onClick={onClose}
             aria-label="Close Menu"

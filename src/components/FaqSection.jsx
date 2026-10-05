@@ -35,7 +35,10 @@ export default function FaqSection() {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
-    <section className="relative w-full bg-white py-16 md:py-24">
+    <section
+      id="faq"
+      className="relative w-full bg-white py-16 md:py-24 scroll-mt-[85px] lg:scroll-mt-[110px]"
+    >
       <div className="max-w-[1000px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Heading */}
         <div className="text-center mb-12">
